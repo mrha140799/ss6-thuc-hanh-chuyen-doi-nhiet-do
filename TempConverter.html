@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CodeGym</title>
+</head>
+<body>
+<p>
+    <input id="inputFahrenheit" type="number" placeholder="Fahrenheit"
+           oninput="tempConverter(this.value)">
+</p>
+
+ <p>Celsius : <span id="outputCelsius"></span></p>
+<script>
+    function tempConverter(celsiusNumb) {
+        celsiusNumb = parseFloat(celsiusNumb);
+        let Fahrenheit = (celsiusNumb -32) / 1.8;
+        document.getElementById("outputCelsius").innerText = Fahrenheit;
+    }
+</script>
+</body>
+</html>
